@@ -37,7 +37,7 @@ function Login({ onLogin }) {
     return (
         <div className="login-container">
             <div className="login-box">
-                <img src="/dot.png" alt="DOT Logo" className="login-logo" />
+                <img src="/dot-login.png" alt="DOT Logo" className="login-logo" />
                 <h2 className="login-title">Login to account</h2>
                 <p className="login-subtitle">Access the ultimate quiz experience and unlock powerful tools to challenge your knowledge!</p>
                 <form onSubmit={handleSubmit}>

@@ -10,7 +10,7 @@ function App() {
   const [quizData, setQuizData] = useState(null);
   const [currentQuestionNumber, setCurrentQuestionNumber] = useState(1);
   const [answers, setAnswers] = useState([]);
-  const [timeRemaining, setTimeRemaining] = useState(600);
+  const [timeRemaining, setTimeRemaining] = useState(300); 
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -26,7 +26,7 @@ function App() {
       setQuizData(JSON.parse(storedQuizData));
       setCurrentQuestionNumber(parseInt(localStorage.getItem('currentQuestionNumber')) || 1);
       setAnswers(JSON.parse(localStorage.getItem('answers')) || []);
-      setTimeRemaining(parseInt(localStorage.getItem('timeRemaining')) || 600);
+      setTimeRemaining(parseInt(localStorage.getItem('timeRemaining')) || 300); 
     }
   }, []);
 
@@ -61,7 +61,7 @@ function App() {
       setQuizData(null);
       setCurrentQuestionNumber(1);
       setAnswers([]);
-      setTimeRemaining(600);
+      setTimeRemaining(300);
       localStorage.clear();
       setIsLoading(false);
       navigate('/');
@@ -109,7 +109,7 @@ function App() {
       await fetchQuizData();
       setCurrentQuestionNumber(1);
       setAnswers([]);
-      setTimeRemaining(600);
+      setTimeRemaining(300);
       navigate('/quiz');
     } catch (error) {
       console.error('Error retrying quiz:', error);

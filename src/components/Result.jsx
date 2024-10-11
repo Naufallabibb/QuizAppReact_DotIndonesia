@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 function Result({ answers = [], questions = [], onRetry, onLogout }) {
     if (!answers.length || !questions.length) {
@@ -20,7 +22,9 @@ function Result({ answers = [], questions = [], onRetry, onLogout }) {
 
     return (
         <div className="result-container">
-            <button onClick={onLogout} className="logout-button">Logout</button>
+            <button onClick={onLogout} className="logout-button">
+                <FontAwesomeIcon icon={faSignOutAlt } className="logout-icon" />
+                </button>
             <div className="result-summary">
                 <h1 className="result-title">Quiz Results</h1>
                 <div className="score-circle">
